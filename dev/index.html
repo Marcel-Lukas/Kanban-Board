@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ein einfaches und intuitives Kanban-Board zur Organisation von Aufgaben. Perfekt um Arbeitsabläufe effizient zu verwalten und produktiv zu bleiben.">
+    <meta name="keywords" content="Kanban Board, Aufgabenmanagement, Projektorganisation, Workflow, Task Management, Projektplanung">    
+    <meta name="author" content="Marcel Lukas" />
+    <link rel="icon" type="image/png" href="src/img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="src/img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="src/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="src/img/favicon/site.webmanifest">
+    <title>Kanban-Board</title>
+    <link rel="stylesheet" type="text/css" href="src/css/styles.css" />
+    <script src="src/js/time.js"></script>
+    <script src="src/js/templates.js"></script>
+    <script src="src/js/script.js"></script>
+    <script src="src/js/focustimer.js"></script>
+  </head>
+
+  <body onload="init()">
+
+    <main>
+
+      <h1>Heutige Coding-Aufgaben</h1><div id="dateTime"></div>
+
+      <header>
+        <div>
+          <textarea type="text" id="text-input" placeholder="Neuer Task"></textarea>
+        </div>
+        <div id="timer">
+          <button class="btn submitbtn" onclick="addNewTask()">Hinzufügen</button>
+          <img onclick="startTimer()" id="starttimer" src="src/img/time.png" alt="Timer Starten">
+          <span id="focus-timer">25:00</span>
+          <audio id="timer-sound" src="src/sound/ring.mp3"></audio>
+          <audio id="pause-end-sound" src="src/sound/pause-end.mp3"></audio>
+        </div>    
+      </header>
+
+      <section>
+        <div class="box" >
+          <h2>ToDo:</h2>
+          <div id="open-task"></div>
+        </div>
+  
+        <div class="box" >
+          <h3>In Arbeit:</h3>
+          <div id="in-progess"></div>
+        </div>
+  
+        <div class="box" >
+          <h4>Erledigt:</h4>
+          <div id="done"></div>
+        </div>
+
+      </section>
+
+    </main>
+  </body>
+</html>

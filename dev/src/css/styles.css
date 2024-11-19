@@ -1,0 +1,357 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Das gesamte Scrollbalken-Element */
+::-webkit-scrollbar {
+  width: 22px;
+  height: 22px;
+}
+
+/* Der Scrollbalkenhintergrund */
+::-webkit-scrollbar-track {
+  background: rgba(140, 196, 196, 0.2);
+}
+
+/* Der Scrollbalkengriff (Slider) */
+::-webkit-scrollbar-thumb {
+  background: rgb(54, 110, 133);
+  border-radius: 8px;
+}
+
+/* Hover-Effekt auf dem Scrollbalkengriff */
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  border: solid 2px rgb(155, 155, 155);
+}
+
+body {
+  height: 100vh;
+  background-image: url('../img/hintergrund.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main {
+  padding-top: 28px;
+  padding-left: 28px;
+  margin-bottom: 80px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+}
+
+section {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.box {
+  margin: 18px;
+  width: 100%;
+  height: 600px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
+  background-color: rgba(142, 168, 166, 0.6);
+  border-radius: 8px;
+  padding: 5px;
+  overflow-y: scroll;
+  backdrop-filter: blur(2px); 
+}
+
+h1 {
+  padding-left: 42px;
+  font-size: 46px;
+  text-decoration: underline;
+  padding-bottom: 24px;
+  color: rgb(243, 243, 243);
+  text-shadow: 1px 1px 3px rgb(21, 201, 192);
+}
+
+h1:hover {
+  cursor: default;
+}
+
+textarea {
+  width: 600px;
+  height: 100px;
+  background-color: rgba(164, 200, 214, 0.8);
+  color: black;
+  font-size: 17px;
+  border-radius: 8px;
+  border: solid 1px rgb(82, 82, 82);
+  margin-bottom: 12px;
+  padding-left: 8px;
+  padding-top: 4px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
+}
+
+textarea:focus{
+  accent-color: rgba(73, 73, 73, 0.4);
+  box-shadow: 0px 0px 14px rgba(204, 204, 204, 0.9);
+}
+
+textarea::placeholder {
+  color: rgb(65, 65, 65);
+  font-style: italic;
+}
+
+.btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  width: 164px;
+}
+
+.btn:hover {
+cursor: pointer;
+transform: scale(104%);
+}
+
+
+h2, h3, h4 {
+  margin-top: 2px;
+  font-size: 26px;
+  margin-bottom: 8px;
+  text-decoration: underline;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px rgb(20, 177, 169);
+  text-align: center;
+}
+
+h2:hover, h3:hover, h4:hover {
+  cursor: default;
+}
+
+li {
+  padding: 6px;
+  font-size: 20px;
+  border-top: solid 4px rgb(92, 92, 92);
+}
+
+#done-line-through {
+  text-decoration: line-through;
+}
+
+.submitbtn {
+  background-color: rgb(81, 191, 255);
+  box-shadow: 3px 3px 4px rgba(255, 255, 255, 0.8) inset, 
+	-2px -2px 5px rgba(0, 0, 0, 0.75) inset;
+  margin-top: 6px;
+}
+
+.submitbtn:hover {
+  padding: 7px;
+  cursor: pointer;
+  background-color: rgb(140, 211, 252);
+  border: solid 1px rgb(161, 161, 161);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.85) inset, 
+	-2px -2px 2px rgba(255, 255, 255, 0.75) inset;
+}
+
+.todo {
+  margin-left: 18px;
+  background-color: rgb(252, 30, 30);
+  margin-bottom: 24px;
+}
+
+.todo:hover {
+  background-color: rgb(255, 166, 0);
+}
+
+.in-work {
+  margin-bottom: 24px;
+  margin-left: 18px;
+  background-color: rgb(255, 166, 0);
+}
+
+.in-work:hover {
+  background-color: rgb(94, 255, 0);
+}
+
+.done {
+  margin-bottom: 24px;
+  margin-left: 18px;
+  background-color: rgb(94, 255, 0);
+}
+
+.done:hover {
+  background-color: rgb(81, 191, 255);
+}
+
+#open-task {
+  background-color: rgba(252, 30, 30, 0.6);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
+}
+
+#in-progess {
+  background-color: rgba(255, 166, 0, 0.55);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
+}
+
+#done {
+  background-color: rgba(94, 255, 0, 0.5);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
+}
+
+.xbtn {
+  text-align: center;
+  margin-left: 8px;
+  padding: 6px;
+  width: 26px;
+  border-radius: 6px;
+  background-color: rgb(252, 30, 30);
+}
+
+.xbtn:hover {
+  cursor: pointer;
+  transform: scale(110%);
+  background-color: rgb(81, 191, 255);
+}
+
+#dateTime {
+  font-size: 44px;
+  border-radius: 24px;
+  padding: 40px 70px;
+  background-color: rgba(156, 156, 156, 0.3);
+  position: absolute;
+  left: 730px;
+  top: 86px;
+  color: rgb(255, 255, 255);
+  box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.9) inset, 
+	-4px -4px 8px rgba(0, 0, 0, 0.8) inset;
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+  backdrop-filter: blur(3px); 
+}
+
+#dateTime:hover {
+  cursor: default;
+}
+
+#timer img {
+  height: 44px;
+  margin-left: 14px;
+  margin-top: 4px;
+  border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+    transform: scale(114%);
+  }
+}
+
+#timer {
+  display: flex;
+  align-items: center;
+}
+
+#focus-timer {
+  margin-top: 6px;
+  margin-left: 10px;
+  font-size: 34px;
+  color: rgb(255, 255, 255);
+}
+
+
+@media (max-width: 1700px) {
+  #dateTime {
+    font-size: 44px;
+    padding: 36px 68px;
+    left: 700px;
+    top: 96px;
+  }
+}
+
+@media (max-width: 1660px) {
+  #dateTime {
+    font-size: 42px;
+    padding: 32px 64px;
+    left: 680px;
+    top: 100px;
+  }
+}
+
+@media (max-width: 1590px) {
+  #dateTime {
+    font-size: 40px;
+    padding: 30px 62px;
+    left: 640px;
+    top: 106px;
+  }
+  textarea {
+    width: 550px;
+    height: 100px;
+    margin-bottom: 12px;
+    padding-left: 8px;
+    padding-top: 4px;
+  }
+}
+
+@media (max-width: 1510px) {
+  #dateTime {
+    padding: 30px 50px;
+    left: 600px;
+  }
+  textarea {
+    width: 500px;
+  }
+}
+
+@media (max-width: 1450px) {
+  #dateTime {
+    font-size: 38px;
+    left: 550px;
+  }
+  textarea {
+    width: 450px;
+  }
+}
+
+@media (max-width: 1370px) {
+  #dateTime {
+    left: 500px;
+  }
+  textarea {
+    width: 400px;
+  }
+}
+
+@media (max-width: 1310px) {
+  #dateTime {
+    left: 450px;
+  }
+  textarea {
+    width: 350px;
+  }
+}
+
+@media (max-width: 1260px) {
+  #dateTime {
+    left: 400px;
+  }
+  textarea {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1215px) {
+  #dateTime {
+    left: 350px;
+  }
+  textarea {
+    width: 250px;
+  }
+}
+
+@media (max-width: 1130px) {
+  #dateTime {
+    display: none;
+  }
+  textarea {
+    width: 460px;
+  }
+}
