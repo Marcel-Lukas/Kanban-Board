@@ -32,7 +32,6 @@ body {
   height: 100vh;
   background-image: url('../img/hintergrund.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
 }
 
@@ -348,10 +347,163 @@ li {
 }
 
 @media (max-width: 1130px) {
+  html {
+    display: flex;
+    justify-content: center;
+  }
   #dateTime {
     display: none;
   }
   textarea {
-    width: 460px;
+    width: 540px;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+  }
+  .box {
+    height: 400px;
+    padding: 5px;
+    overflow-y: scroll;
+  }
+  h1 {
+    padding-left: 10px;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  textarea {
+    width: 480px;
+  }
+  section {
+    display: flex;
+    justify-content: center;
+  }
+  h1 {
+    font-size: 40px;
+    padding-bottom: 24px;
+  }
+  .box {
+    width: 90%;
+  }
+}
+
+@media (max-width: 630px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 80vw;
+  }
+  textarea {
+    margin: 0;
+    padding: 0;
+    width: 400px;
+  }
+  .box {
+    width: 400px;
+  }
+  section {
+    display: flex;
+    align-items: center;
+    width: 80vw;
+  }
+  #timer {
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  h1 {
+    font-size: 34px;
+    padding-bottom: 14px;
+  }
+  main {
+    text-align: center;
+  }
+}
+
+@media (max-width: 560px) {
+  header {
+    width: 60vw;
+  }
+  textarea {
+    width: 300px;
+  }
+  .box {
+    width: 300px;
+  }
+  section {
+    width: 60vw;
+  }
+  h1 {
+    font-size: 24px;
+    padding-bottom: 8px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  header {
+    width: 60vw;
+  }
+  textarea {
+    width: 300px;
+  }
+  .box {
+    width: 300px;
+  }
+  section {
+    width: 60vw;
+  }
+  h1 {
+    font-size: 20px;
+    font-weight: 400;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  #timer {
+    display: flex;
+    flex-direction: column;
+  }
+  #focus-timer {
+    font-size: 24px;
+  }
+  h2, h3, h4 {
+    margin-top: 0px;
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 368px) {
+  textarea {
+    width: 250px;
+  }
+  .box {
+    width: 250px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  .xbtn {
+    margin: 0;
+    margin-left: 4px;
+    margin-bottom: 8px;
+  }
+  .todo {
+    margin-left: 5px;
+    margin-bottom: 8px;
+  }
+
+  .in-work, .done {
+    margin-left: 0px;
+    margin-bottom: 8px;
   }
 }

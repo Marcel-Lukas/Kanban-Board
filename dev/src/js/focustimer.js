@@ -1,10 +1,14 @@
 let timerInterval;
 
+
 function startTimer() {
     let timerElement = document.getElementById("focus-timer");
     let totalTime = 25 * 60;
     let timerSound = document.getElementById("timer-sound");
-                timerSound.volume = 0.2;
+    timerSound.volume = 0.2;
+    let clickOnSound = document.getElementById("click-on-timer-sound");
+    clickOnSound.play();
+
     
     clearInterval(timerInterval);
 
